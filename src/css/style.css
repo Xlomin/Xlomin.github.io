@@ -1,0 +1,473 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background: #344051;
+}
+
+.logo {
+  color: #fff;
+  font-size: 28px;
+  line-height: 60px;
+  padding-left: 388px;
+  float: left;
+}
+
+.menu {
+  float: left;
+  padding-left: 432px;
+}
+
+.menu li {
+  float: left;
+  line-height: 60px;
+  color: #fff;
+  margin-right: 40px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.main {
+  width: 100%;
+  height: calc(100% - 60px);
+  background: url("../img/mainBG.jpg") no-repeat center / 100%;
+}
+
+.titleContainer {
+  float: left;
+  margin: 432px 0px 0px 404px;
+  color: #2c384a;
+  text-align: center;
+}
+
+.titleContainer h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.titleContainer h4 {
+  margin-top: 40px;
+  font-size: 22px;
+  color: #79818d;
+}
+
+.titleContainer input {
+  height: 40px;
+  text-align: center;
+  border: 3px solid #6d7682;
+  background: none;
+  border-radius: 5px;
+  color: #6d7682;
+  font-size: 13px;
+  font-weight: bolder;
+  padding: 0px 16px;
+  margin: 58px 14px 0px 14px;
+}
+
+.about {
+  width: 100%;
+  height: 70%;
+  background: #fff;
+}
+
+.h2 {
+  text-align: center;
+  padding-top: 107px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #263244;
+}
+
+.trait {
+  display: block;
+  margin: 30px auto 0px auto;
+}
+
+#MyRoundPhoto {
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin: 50px auto 0px auto;
+  border-radius: 50%;
+}
+
+.about div {
+  margin: 32px 596px 0px 596px;
+}
+
+.about p {
+  padding-bottom: 34px;
+  font-size: 17px;
+  color: #3f495a;
+}
+
+.about button {
+  height: 34px;
+  text-align: center;
+  border: 3px solid #6d7682;
+  background: none;
+  border-radius: 5px;
+  color: #6d7682;
+  font-size: 13px;
+  font-weight: bolder;
+  padding: 0px 16px;
+  margin: 0px 800px 0px 930px;
+}
+
+.whatICanDo {
+  width: 100%;
+  height: 50%;
+  background: url("../img/whatICanDoBG.jpg") no-repeat center / 100%;
+}
+
+.whatICanDo .columns {
+  background: none;
+  margin: 80px 15% 0px 20%;
+}
+
+.whatICanDo .columns div {
+  float: left;
+  align-content: center;
+  max-width: 20%;
+  text-align: center;
+  margin-right: 50px;
+}
+
+.whatICanDo .columns p {
+  margin: 30px 0px 15px 0px;
+  font-size: 22px;
+  color: #da7d04;
+  font-weight: bolder;
+}
+.whatICanDo .columns span {
+  font-size: 16px;
+  color: #3f495a;
+}
+
+.case {
+  background: #fff;
+  width: 100%;
+  height: 120%;
+}
+
+.case > p {
+  text-align: center;
+  margin: 30px 0px;
+  font-size: 16px;
+  color: #3f495a;
+}
+
+.caseExample {
+  padding: 10px 21%;
+}
+
+.caseExample img {
+  margin-bottom: 40px;
+}
+
+.informationAboutConsumer {
+  max-width: 30%;
+  float: left;
+}
+
+.case h3 {
+  font-size: 24px;
+  font-weight: lighter;
+  color: #384354;
+  margin: 10px 0px;
+}
+.informationAboutConsumer button {
+  margin-top: 15px;
+  width: 70%;
+  height: 45px;
+  background: #63b5ae;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.informationAboutConsumer span,
+a {
+  font-size: 16px;
+  color: #3f495a;
+}
+
+.informationAboutProject {
+  max-width: 60%;
+  float: left;
+}
+
+.informationAboutProject p {
+  font-size: 18px;
+  color: #3f495a;
+}
+
+.price {
+  height: 80%;
+}
+
+.price > div {
+  height: 60%;
+  margin: 50px 27% 0px 27%;
+}
+
+.price h3 {
+  font-size: 22px;
+  font-weight: bolder;
+  color: #263244;
+}
+
+.price select {
+  width: 100%;
+  height: 58px;
+  margin: 22px 0px 40px 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #eeeeee;
+  font-size: 18px;
+  color: #a1a1a1;
+}
+
+.price option {
+  font-size: 22px;
+  color: black;
+  height: 100%;
+}
+
+.price img {
+  width: 100%;
+}
+
+.result {
+  font-size: 20px;
+  font-weight: bold;
+  color: #393b3d;
+}
+
+.result span {
+  display: inline-block;
+  margin-top: 20px;
+}
+.resultNumber {
+  color: #1c2534;
+  font-weight: bold;
+  float: right;
+}
+
+.statistics {
+  width: 100%;
+  height: 50%;
+  background: url("../img/statisticsBG.jpg") no-repeat center / 100%;
+}
+
+.statistics .columns {
+  margin: 80px 15% 0px 23%;
+}
+
+.statistics .columns div {
+  float: left;
+  text-align: center;
+  margin-right: 100px;
+}
+
+.statistics .columns img {
+  max-height: 47px;
+}
+
+.statistics .columns p {
+  margin: 30px 0px 20px 0px;
+  font-size: 28px;
+  color: #323e4f;
+  font-weight: bold;
+}
+.statistics .columns span {
+  font-size: 20px;
+  font-weight: lighter;
+  color: #323e4f;
+}
+
+.reviews {
+  width: 100%;
+  height: 65%;
+}
+
+#photoCostumer {
+  display: block;
+  margin: 56px auto 36px auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.reviews > p {
+  text-align: center;
+  font-size: 16px;
+  color: #3d4654;
+  margin: 0px 30% 38px 30%;
+}
+
+.radio {
+  text-align: center;
+}
+
+.form_radio {
+  display: inline-block;
+  text-align: center;
+}
+.form_radio input[type="radio"] {
+  display: none;
+}
+.form_radio label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 10px;
+  margin-right: 10px;
+  user-select: none;
+}
+.form_radio label:before {
+  content: "";
+  width: 17px;
+  height: 18px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background: url(../img/radioDisabled.png) 0 0 no-repeat;
+}
+
+.form_radio input[type="radio"]:checked + label:before {
+  background: url(../img/radioEnabled.png) 0 0 no-repeat;
+}
+
+.contacts {
+  width: 100%;
+  height: 80%;
+  background: url("../img/contactsBG.jpg") no-repeat center / 100%;
+}
+
+.contacts > h2 {
+  color: #fff !important;
+}
+
+.contacts > p {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.contacts .columns {
+  /*position: absolute;
+  left: 38%;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts .columns > div {
+  float: right;
+  text-align: center;
+  margin: 40px 100px;
+}
+
+.contacts .columns p {
+  color: #fff;
+  margin-top: 15px;
+}
+
+.contacts .columns img {
+  max-height: 24px;
+}
+
+.message {
+  margin: 0 25%;
+  width: 50%;
+}
+
+.message h3 {
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  margin: 10px 0 42px 0;
+}
+
+.firstRow {
+  text-align: center;
+}
+
+.firstRow input {
+  width: 350px;
+  height: 35px;
+  text-align: left;
+  padding-left: 15px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.firstRow input[type="text"] {
+  margin-right: 30px;
+}
+
+.secondRow {
+  text-align: center;
+}
+
+.secondRow input {
+  width: 734px;
+  height: 95px;
+  margin-top: 13px;
+  padding: 0px 0px 50px 15px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.thirdRow {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.thirdRow input {
+  background: none;
+  width: 120px;
+  height: 45px;
+  font-size: 18px;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 5px;
+}
+
+.socialNetworking ul {
+  padding: 0 40%;
+}
+
+.socialNetworking li {
+  float: left;
+  margin-top: 75px;
+  padding-left: 80px;
+}
+
+.map {
+  position: relative;
+}
+
+.map img {
+  width: 100%;
+  height: auto;
+}
+.map button {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
