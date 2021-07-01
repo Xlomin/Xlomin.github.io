@@ -6,6 +6,8 @@ nav {
   width: 100%;
   height: 60px;
   background: #344051;
+  position: fixed;
+  z-index: 1;
 }
 
 .logo {
@@ -14,6 +16,19 @@ nav {
   line-height: 60px;
   padding-left: 388px;
   float: left;
+  -webkit-animation: comming 1.5s ease-in;
+  -o-animation: comming 1.5s ease-in;
+  animation: comming 1.5s ease-in;
+}
+
+@keyframes comming {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .menu {
@@ -28,11 +43,75 @@ nav {
   margin-right: 40px;
   font-size: 16px;
   text-transform: uppercase;
+  -webkit-animation: topshift 0.3s ease forwards;
+  -o-animation: topshift 0.3s ease forwards;
+  animation: topshift 0.3s ease forwards;
+  opacity: 0;
+}
+
+.menu li:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.menu li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.menu li:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.menu li:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+.menu li:nth-child(6) {
+  animation-delay: 1.5s;
+}
+
+.menu li:nth-child(7) {
+  animation-delay: 1.8s;
+}
+
+@keyframes topshift {
+  from {
+    opacity: 0;
+    margin-top: -80px;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+.menu li a {
+  color: #fff;
+  transition: all 0.1s;
+  transform: scale(1);
+  display: inline-block;
+}
+
+.menu li a:visited {
+  color: #fff;
+}
+
+.menu li a:hover {
+  color: #ff9100;
+}
+
+.menu li a:active {
+  transform: scale(1.1);
+}
+
+main {
+  width: 100%;
+  height: 100%;
 }
 
 .main {
   width: 100%;
-  height: calc(100% - 60px);
+  height: 100%;
   background: url("../img/photo.png") 90% 100% / auto 85% no-repeat,
     url("../img/mainBG.jpg") no-repeat center / 100%;
 }
@@ -42,6 +121,25 @@ nav {
   margin: 432px 0px 0px 404px;
   color: #2c384a;
   text-align: center;
+  opacity: 0;
+  -webkit-animation: titleMove 1s ease-out forwards;
+  -o-animation: titleMove 1s ease-out forwards;
+  animation: titleMove 1s ease-out forwards;
+  -webkit-animation-delay: 1.8s;
+  -o-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+
+@keyframes titleMove {
+  from {
+    opacity: 0;
+    margin-left: -500px;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 404px;
+  }
 }
 
 .titleContainer h1 {
@@ -66,9 +164,21 @@ nav {
   font-weight: bolder;
   padding: 0px 16px;
   margin: 58px 14px 0px 14px;
+  transition: all 0.2s;
+  transform: scale(1);
+  cursor: pointer;
 }
 
-.about {
+.titleContainer input:hover {
+  background: #344051;
+  color: #fff;
+}
+
+.titleContainer input:active {
+  transform: scale(1.1);
+}
+
+#about {
   width: 100%;
   height: 75%;
   background: #fff;
@@ -95,17 +205,17 @@ nav {
   border-radius: 50%;
 }
 
-.about div {
+#about div {
   margin: 32px 596px 0px 596px;
 }
 
-.about p {
+#about p {
   padding-bottom: 34px;
   font-size: 17px;
   color: #3f495a;
 }
 
-.about button {
+#about button {
   display: block;
   height: 34px;
   text-align: center;
@@ -117,45 +227,63 @@ nav {
   font-weight: bolder;
   padding: 0px 16px;
   margin: auto;
+  transition: all 0.2s;
+  transform: scale(1);
 }
 
-.whatICanDo {
+#about button:hover {
+  color: #fff;
+  background: #344051;
+}
+
+#about button:active {
+  transform: scale(1.1);
+}
+
+#whatICanDo {
   width: 100%;
   height: 60%;
   background: url("../img/whatICanDoBG.jpg") no-repeat center / 100%;
 }
 
-.whatICanDo .columns {
+#whatICanDo .columns {
   background: none;
   margin: 80px 15% 0px 20%;
 }
 
-.whatICanDo .columns div {
+#whatICanDo .columns div {
   float: left;
   align-content: center;
   max-width: 20%;
   text-align: center;
   margin-right: 50px;
+  transform: scale(1);
+  transition: all 0.3s;
 }
 
-.whatICanDo .columns p {
+#whatICanDo .columns div:hover {
+  transform: scale(1.3);
+}
+
+#whatICanDo .columns p {
   margin: 30px 0px 15px 0px;
   font-size: 22px;
   color: #da7d04;
   font-weight: bolder;
 }
-.whatICanDo .columns span {
+
+#whatICanDo .columns span {
   font-size: 16px;
   color: #3f495a;
 }
 
-.case {
+#case {
   background: #fff;
   width: 100%;
   height: 120%;
 }
 
-.case > p {
+#case > p {
   text-align: center;
   margin: 30px 0px;
   font-size: 16px;
@@ -175,12 +303,13 @@ nav {
   float: left;
 }
 
-.case h3 {
+#case h3 {
   font-size: 24px;
   font-weight: lighter;
   color: #384354;
   margin: 10px 0px;
 }
+
 .informationAboutConsumer button {
   margin-top: 15px;
   width: 70%;
@@ -191,6 +320,12 @@ nav {
   font-weight: 600;
   font-size: 18px;
   border-radius: 5px;
+  transition: all 0.3s;
+  transform: scale(1);
+}
+
+.informationAboutConsumer button:hover {
+  transform: scale(1.2);
 }
 
 .informationAboutConsumer span,
@@ -209,22 +344,22 @@ a {
   color: #3f495a;
 }
 
-.price {
+#price {
   height: 90%;
 }
 
-.price > div {
+#price > div {
   height: 60%;
   margin: 50px 27% 0px 27%;
 }
 
-.price h3 {
+#price h3 {
   font-size: 22px;
   font-weight: bolder;
   color: #263244;
 }
 
-.price select {
+#price select {
   width: 100%;
   height: 58px;
   margin: 22px 0px 40px 0px;
@@ -233,15 +368,16 @@ a {
   background: #eeeeee;
   font-size: 18px;
   color: #a1a1a1;
+  cursor: pointer;
 }
 
-.price option {
+#price option {
   font-size: 22px;
   color: black;
   height: 100%;
 }
 
-.price img {
+#price img {
   width: 100%;
 }
 
@@ -251,49 +387,59 @@ a {
   color: #393b3d;
 }
 
-.result span {
+.result p {
   display: inline-block;
   margin-top: 20px;
+  width: 100%;
 }
+
 .resultNumber {
   color: #1c2534;
   font-weight: bold;
   float: right;
+  font-size: 24px;
 }
 
-.statistics {
+#statistics {
   width: 100%;
   height: 55%;
-  background: url("../img/statisticsBG.jpg") no-repeat center / 100%;
+  background: url("../img/statisticsBG.jpg") no-repeat center / 100% fixed;
 }
 
-.statistics .columns {
+#statistics .columns {
   margin: 80px 10% 0px 20%;
 }
 
-.statistics .columns div {
+#statistics .columns div {
   float: left;
   text-align: center;
   margin-right: 100px;
+  transition: all 0.2s;
+  transform: scale(1);
 }
 
-.statistics .columns img {
+#statistics .columns div:hover {
+  transform: scale(1.2);
+}
+
+#statistics .columns img {
   max-height: 47px;
 }
 
-.statistics .columns p {
+#statistics .columns p {
   margin: 30px 0px 20px 0px;
   font-size: 28px;
   color: #323e4f;
   font-weight: bold;
 }
-.statistics .columns span {
+
+#statistics .columns span {
   font-size: 20px;
   font-weight: lighter;
   color: #323e4f;
 }
 
-.reviews {
+#reviews {
   width: 100%;
   height: 65%;
 }
@@ -306,7 +452,7 @@ a {
   border-radius: 50%;
 }
 
-.reviews > p {
+#reviews > p {
   text-align: center;
   font-size: 16px;
   color: #3d4654;
@@ -317,71 +463,74 @@ a {
   text-align: center;
 }
 
-.form_radio {
+.formRadio {
   display: inline-block;
   text-align: center;
 }
-.form_radio input[type="radio"] {
-  display: none;
-}
-.form_radio label {
-  cursor: pointer;
-  position: relative;
-  padding-left: 10px;
-  margin-right: 10px;
-  user-select: none;
-}
-.form_radio label:before {
-  content: "";
-  width: 17px;
-  height: 18px;
+
+.customRadio {
   position: absolute;
-  left: 0;
-  bottom: 1px;
+  z-index: -1;
+  opacity: 0;
+}
+
+.customRadio + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.customRadio + label::before {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  border: none;
   background: url(../img/radioDisabled.png) 0 0 no-repeat;
 }
 
-.form_radio input[type="radio"]:checked + label:before {
+.customRadio:checked + label::before {
+  border-color: #ff8800;
+  background-color: #ff8800;
   background: url(../img/radioEnabled.png) 0 0 no-repeat;
 }
 
-.contacts {
+#contacts {
   width: 100%;
   height: 80%;
   background: url("../img/contactsBG.jpg") no-repeat center / 100%;
 }
 
-.contacts > h2 {
+#contacts > h2 {
   color: #fff !important;
 }
 
-.contacts > p {
+#contacts > p {
   text-align: center;
   color: #fff;
   font-size: 18px;
   margin-top: 30px;
 }
 
-.contacts .columns {
-  /*position: absolute;
-  left: 38%;*/
+#contacts .columns {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.contacts .columns > div {
+#contacts .columns > div {
   float: right;
   text-align: center;
   margin: 40px 100px;
 }
 
-.contacts .columns p {
+#contacts .columns p {
   color: #fff;
   margin-top: 15px;
 }
 
-.contacts .columns img {
+#contacts .columns img {
   max-height: 24px;
 }
 
@@ -407,7 +556,8 @@ a {
   text-align: left;
   padding-left: 15px;
   font-size: 18px;
-  opacity: 0.8;
+  opacity: 0.7;
+  transition: all 0.2s;
 }
 
 .firstRow input[type="text"] {
@@ -424,7 +574,13 @@ a {
   margin-top: 13px;
   padding: 0px 0px 50px 15px;
   font-size: 18px;
-  opacity: 0.8;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.secondRow input:focus,
+.firstRow input:focus {
+  opacity: 0.9;
 }
 
 .thirdRow {
@@ -437,9 +593,22 @@ a {
   width: 120px;
   height: 45px;
   font-size: 18px;
+  font-weight: bolder;
   color: #fff;
   border: 3px solid #fff;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(1);
+}
+
+.thirdRow input:hover {
+  color: #354051;
+  background: #fff;
+}
+
+.thirdRow input:active {
+  transform: scale(1.1);
 }
 
 .socialNetworking ul {
@@ -452,15 +621,16 @@ a {
   padding-left: 80px;
 }
 
-.map {
+#map {
   position: relative;
 }
 
-.map img {
+#map img {
   width: 100%;
   height: auto;
 }
-.map button {
+
+#map button {
   position: absolute;
   top: 50%;
   left: 47%;
@@ -472,4 +642,16 @@ a {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+}
+
+footer {
+  width: 100%;
+  height: 8%;
+  background: #354051;
+}
+
+footer > p {
+  text-align: center;
+  padding-top: 30px;
+  color: #fff;
 }
