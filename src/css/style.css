@@ -187,6 +187,12 @@ main {
     z-index: 3;
   }
 
+  .titleContainer{
+    -webkit-animation-delay: 0.7s;
+  -o-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+  }
+
   .titleContainer input {
     border: 3px solid #fff;
   }
@@ -542,35 +548,189 @@ main {
     display: block;
     margin: 15px auto 10px auto;
   }
+  #reviews{
+    height: 60%;
+  }
 }
 
 #contacts {
   width: 100%;
   height: 80%;
-  background: url("../img/contactsBG.jpg") no-repeat center / 100%;
+  background: url("../img/contactsBG.jpg") no-repeat center / 100% 100%;
 }
 
 #contacts > h2 {
   color: #fff !important;
 }
 
-#contacts .columns > p {
-  text-align: center;
+#contacts p {
   color: #fff;
-  font-size: 18px;
-  margin-top: 30px;
+  text-align: center;
+  margin-top: 10px;
 }
 
-#contacts .columns > div {
-  float: right;
+#contacts .col{
   text-align: center;
 }
 
-#contacts .columns p {
-  color: #fff;
-  margin-top: 15px;
-}
-
-#contacts .columns img {
+#contacts .col img {
   max-height: 24px;
+}
+
+#contacts .firstcolumn,
+#contacts .secondcolumn,
+#contacts .thirdcolumn{
+  margin-top: 20px;
+}
+
+.message h3 {
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  margin: 2% 0 4% 0;
+}
+
+.firstRow input {
+  width: 100%;
+  height: 35px;
+  text-align: left;
+  padding-left: 15px;
+  font-size: 18px;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.firstRow input[type="text"]{
+  width: 95% !important;
+}
+
+.secondRow {
+  text-align: center;
+}
+
+.secondRow input {
+  width: 100%;
+  height: 95px;
+  margin-top: 13px;
+  padding: 0px 0px 50px 15px;
+  font-size: 18px;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.secondRow input:focus,
+.firstRow input:focus {
+  opacity: 0.9;
+}
+
+.thirdRow {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.thirdRow input {
+  background: none;
+  width: 120px;
+  height: 45px;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(1);
+}
+
+.thirdRow input:hover {
+  color: #354051;
+  background: #fff;
+}
+
+.thirdRow input:active {
+  transform: scale(1.1);
+}
+
+.socialNetworking ul {
+  padding: 0 40%;
+}
+
+.socialNetworking li {
+  float: left;
+  margin-top: 20%;
+  padding-left: 20%;
+}
+
+@media(max-width: 768px){
+  #contacts .firstcolumn,
+  #contacts .secondcolumn,
+  #contacts .thirdcolumn{
+    margin-top: 0;
+  }
+
+  .message h3{
+    margin: 0 0 4% 0;
+  }
+
+  .thirdRow{
+    margin-top: 15px;
+  }
+
+  .socialNetworking ul {
+    padding: 0 35%;
+  }
+  
+  .socialNetworking li {
+    float: left;
+    margin-top: 15%;
+    padding-left: 10%;
+  }
+
+  #contacts{
+    height: 75%;
+  }
+}
+
+#map {
+  position: relative;
+}
+
+#map img {
+  width: 100%;
+  height: auto;
+}
+
+#map button {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+footer {
+  width: 100%;
+  height: 8%;
+  background: #354051;
+}
+
+footer > p {
+  text-align: center;
+  padding-top: 30px;
+  color: #fff;
+}
+
+@media (max-width: 575.8px){ 
+  #map button{
+    top: 30%;
+    left: 40%;
+    font-size: 13px;
+    padding: 3px 6px;
+  }
 }
