@@ -7,14 +7,13 @@ nav {
   height: 60px;
   background: #344051;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
 }
 
 .logo {
   color: #fff;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 60px;
-  padding-left: 388px;
   float: left;
   -webkit-animation: comming 1.5s ease-in;
   -o-animation: comming 1.5s ease-in;
@@ -33,7 +32,6 @@ nav {
 
 .menu {
   float: left;
-  padding-left: 432px;
 }
 
 .menu li {
@@ -41,7 +39,7 @@ nav {
   line-height: 60px;
   color: #fff;
   margin-right: 40px;
-  font-size: 16px;
+  font-size: 15px;
   text-transform: uppercase;
   -webkit-animation: topshift 0.3s ease forwards;
   -o-animation: topshift 0.3s ease forwards;
@@ -69,10 +67,6 @@ nav {
   animation-delay: 1.5s;
 }
 
-.menu li:nth-child(7) {
-  animation-delay: 1.8s;
-}
-
 @keyframes topshift {
   from {
     opacity: 0;
@@ -90,6 +84,7 @@ nav {
   transition: all 0.1s;
   transform: scale(1);
   display: inline-block;
+  text-decoration: none;
 }
 
 .menu li a:visited {
@@ -104,6 +99,10 @@ nav {
   transform: scale(1.1);
 }
 
+.white-btn:visited {
+  color: #fff;
+}
+
 main {
   width: 100%;
   height: 100%;
@@ -113,14 +112,14 @@ main {
   width: 100%;
   height: 100%;
   background: url("../img/photo.png") 90% 100% / auto 85% no-repeat,
-    url("../img/mainBG.jpg") no-repeat center / 100%;
+    url("../img/mainBG.jpg") no-repeat center / 100% 100%;
 }
 
 .titleContainer {
   float: left;
-  margin: 432px 0px 0px 404px;
   color: #2c384a;
   text-align: center;
+  width: 100%;
   opacity: 0;
   -webkit-animation: titleMove 1s ease-out forwards;
   -o-animation: titleMove 1s ease-out forwards;
@@ -138,13 +137,14 @@ main {
 
   to {
     opacity: 1;
-    margin-top: 404px;
+    margin-top: 0px;
   }
 }
 
 .titleContainer h1 {
-  font-size: 60px;
-  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 72px;
+  font-weight: 600;
 }
 
 .titleContainer h4 {
@@ -178,40 +178,63 @@ main {
   transform: scale(1.1);
 }
 
+@media (max-width: 991px) {
+  .titleContainer,
+  .titleContainer h4,
+  .titleContainer input {
+    color: #fff;
+    position: relative;
+    z-index: 3;
+  }
+
+  .titleContainer input {
+    border: 3px solid #fff;
+  }
+
+  .main {
+    position: relative;
+  }
+
+  .main::after {
+    content: "";
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: rgb(0, 0, 0, 0.4);
+  }
+}
+
 #about {
   width: 100%;
-  height: 75%;
+  height: 70%;
   background: #fff;
 }
 
 .h2 {
   text-align: center;
-  padding-top: 100px;
-  font-size: 32px;
-  font-weight: bold;
+  padding-top: 4%;
+  font-weight: 700 !important;
   color: #263244;
 }
 
 .trait {
   display: block;
-  margin: 30px auto 0px auto;
+  margin: 1% auto 0px auto;
 }
 
 #MyRoundPhoto {
   display: block;
   height: 200px;
   width: 200px;
-  margin: 50px auto 0px auto;
+  margin: 2.5% auto 2% auto;
   border-radius: 50%;
 }
 
-#about div {
-  margin: 32px 596px 0px 596px;
-}
-
 #about p {
-  padding-bottom: 34px;
-  font-size: 17px;
+  padding-top: 17px;
+  font-size: 13px;
   color: #3f495a;
 }
 
@@ -226,7 +249,7 @@ main {
   font-size: 13px;
   font-weight: bolder;
   padding: 0px 16px;
-  margin: auto;
+  margin: 6% auto 3% auto;
   transition: all 0.2s;
   transform: scale(1);
 }
@@ -240,47 +263,78 @@ main {
   transform: scale(1.1);
 }
 
+@media (max-width: 767.8px) {
+  #about {
+    height: 80%;
+  }
+
+  #MyRoundPhoto {
+    height: 130px;
+    width: 130px;
+  }
+
+  #about p {
+    padding-top: 0;
+  }
+}
+
+@media (min-height: 575.8px) and (max-height: 658px) {
+  #about {
+    height: 90%;
+  }
+}
+
 #whatICanDo {
   width: 100%;
   height: 60%;
-  background: url("../img/whatICanDoBG.jpg") no-repeat center / 100%;
+  background: url("../img/whatICanDoBG.jpg") no-repeat center / 100% 100%;
 }
 
-#whatICanDo .columns {
-  background: none;
-  margin: 80px 15% 0px 20%;
+#whatICanDo .row {
+  margin-top: 8%;
 }
 
-#whatICanDo .columns div {
-  float: left;
-  align-content: center;
-  max-width: 20%;
+#whatICanDo .col {
   text-align: center;
-  margin-right: 50px;
   transform: scale(1);
   transition: all 0.3s;
 }
 
-#whatICanDo .columns div:hover {
+#whatICanDo .carousel-item {
+  text-align: center;
+  background: grey 1;
+}
+
+#whatICanDo .col:hover {
   transform: scale(1.3);
 }
 
-#whatICanDo .columns p {
+#whatICanDo .col p,
+#whatICanDo .carousel-item p {
   margin: 30px 0px 15px 0px;
-  font-size: 22px;
+  font-size: 20px;
   color: #da7d04;
-  font-weight: bolder;
+  font-weight: 700;
 }
 
-#whatICanDo .columns span {
-  font-size: 16px;
+#whatICanDo .col span,
+#whatICanDo .carousel-item span {
+  display: block;
+  font-size: 14px;
   color: #3f495a;
+  margin: 0 10%;
+}
+
+@media (max-width: 768px) {
+  #whatICanDo {
+    height: 47%;
+  }
 }
 
 #case {
   background: #fff;
   width: 100%;
-  height: 120%;
+  height: 185%;
 }
 
 #case > p {
@@ -290,12 +344,8 @@ main {
   color: #3f495a;
 }
 
-.caseExample {
-  padding: 10px 21%;
-}
-
 .caseExample img {
-  margin-bottom: 40px;
+  width: 100%;
 }
 
 .informationAboutConsumer {
@@ -304,13 +354,13 @@ main {
 }
 
 #case h3 {
-  font-size: 24px;
-  font-weight: lighter;
+  font-size: 22px;
+  font-weight: 600;
   color: #384354;
   margin: 10px 0px;
 }
 
-.informationAboutConsumer button {
+#case button {
   margin-top: 15px;
   width: 70%;
   height: 45px;
@@ -324,33 +374,29 @@ main {
   transform: scale(1);
 }
 
+.adaptedCaseButton {
+  display: block;
+  margin: auto;
+}
+
 .informationAboutConsumer button:hover {
   transform: scale(1.2);
 }
 
 .informationAboutConsumer span,
-a {
+.informationAboutConsumer a {
   font-size: 16px;
   color: #3f495a;
+  text-decoration: none;
 }
 
 .informationAboutProject {
-  max-width: 60%;
   float: left;
 }
 
 .informationAboutProject p {
-  font-size: 18px;
+  font-size: 16px;
   color: #3f495a;
-}
-
-#price {
-  height: 90%;
-}
-
-#price > div {
-  height: 60%;
-  margin: 50px 27% 0px 27%;
 }
 
 #price h3 {
@@ -360,21 +406,10 @@ a {
 }
 
 #price select {
-  width: 100%;
   height: 58px;
-  margin: 22px 0px 40px 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: #eeeeee;
   font-size: 18px;
-  color: #a1a1a1;
-  cursor: pointer;
-}
-
-#price option {
-  font-size: 22px;
-  color: black;
-  height: 100%;
+  margin: 22px 0px 40px 0px;
+  background: #eeeeee;
 }
 
 #price img {
@@ -383,19 +418,18 @@ a {
 
 .result {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
   color: #393b3d;
 }
 
 .result p {
   display: inline-block;
-  margin-top: 20px;
   width: 100%;
 }
 
 .resultNumber {
   color: #1c2534;
-  font-weight: bold;
+  font-weight: 600;
   float: right;
   font-size: 24px;
 }
@@ -403,45 +437,52 @@ a {
 #statistics {
   width: 100%;
   height: 55%;
-  background: url("../img/statisticsBG.jpg") no-repeat center / 100% fixed;
+  background: url("../img/statisticsBG.jpg") repeat center / 100% fixed;
 }
 
-#statistics .columns {
-  margin: 80px 10% 0px 20%;
+#statistics .row {
+  margin-top: 8%;
 }
 
-#statistics .columns div {
-  float: left;
+#statistics .col {
   text-align: center;
-  margin-right: 100px;
-  transition: all 0.2s;
   transform: scale(1);
+  transition: all 0.3s;
 }
 
-#statistics .columns div:hover {
-  transform: scale(1.2);
+#statistics .carousel-item {
+  text-align: center;
+  background: grey 1;
 }
 
-#statistics .columns img {
+#statistics .col img,
+#statistics .carousel-item img {
   max-height: 47px;
 }
 
-#statistics .columns p {
-  margin: 30px 0px 20px 0px;
+#statistics .col p,
+#statistics .carousel-item p {
+  margin-top: 14px;
   font-size: 28px;
   color: #323e4f;
   font-weight: bold;
 }
 
-#statistics .columns span {
+#statistics .col span,
+#statistics .carousel-item span {
   font-size: 20px;
-  font-weight: lighter;
+  font-weight: 500;
   color: #323e4f;
 }
 
+@media (max-width: 768px) {
+  #statistics {
+    height: 40%;
+  }
+}
+
 #reviews {
-  width: 100%;
-  height: 65%;
+  height: 53%;
 }
 
 #photoCostumer {
@@ -452,11 +493,11 @@ a {
   border-radius: 50%;
 }
 
-#reviews > p {
+#reviews p {
   text-align: center;
   font-size: 16px;
   color: #3d4654;
-  margin: 0px 30% 38px 30%;
+  margin-bottom: 24px;
 }
 
 .radio {
@@ -496,6 +537,13 @@ a {
   background: url(../img/radioEnabled.png) 0 0 no-repeat;
 }
 
+@media (max-width: 575.8px) {
+  #photoCostumer {
+    display: block;
+    margin: 15px auto 10px auto;
+  }
+}
+
 #contacts {
   width: 100%;
   height: 80%;
@@ -506,23 +554,16 @@ a {
   color: #fff !important;
 }
 
-#contacts > p {
+#contacts .columns > p {
   text-align: center;
   color: #fff;
   font-size: 18px;
   margin-top: 30px;
 }
 
-#contacts .columns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 #contacts .columns > div {
   float: right;
   text-align: center;
-  margin: 40px 100px;
 }
 
 #contacts .columns p {
@@ -532,126 +573,4 @@ a {
 
 #contacts .columns img {
   max-height: 24px;
-}
-
-.message {
-  margin: 0 25%;
-  width: 50%;
-}
-
-.message h3 {
-  color: #fff;
-  font-size: 22px;
-  text-align: center;
-  margin: 10px 0 42px 0;
-}
-
-.firstRow {
-  text-align: center;
-}
-
-.firstRow input {
-  width: 350px;
-  height: 35px;
-  text-align: left;
-  padding-left: 15px;
-  font-size: 18px;
-  opacity: 0.7;
-  transition: all 0.2s;
-}
-
-.firstRow input[type="text"] {
-  margin-right: 30px;
-}
-
-.secondRow {
-  text-align: center;
-}
-
-.secondRow input {
-  width: 734px;
-  height: 95px;
-  margin-top: 13px;
-  padding: 0px 0px 50px 15px;
-  font-size: 18px;
-  opacity: 0.7;
-  transition: all 0.2s;
-}
-
-.secondRow input:focus,
-.firstRow input:focus {
-  opacity: 0.9;
-}
-
-.thirdRow {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.thirdRow input {
-  background: none;
-  width: 120px;
-  height: 45px;
-  font-size: 18px;
-  font-weight: bolder;
-  color: #fff;
-  border: 3px solid #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.2s;
-  transform: scale(1);
-}
-
-.thirdRow input:hover {
-  color: #354051;
-  background: #fff;
-}
-
-.thirdRow input:active {
-  transform: scale(1.1);
-}
-
-.socialNetworking ul {
-  padding: 0 40%;
-}
-
-.socialNetworking li {
-  float: left;
-  margin-top: 75px;
-  padding-left: 80px;
-}
-
-#map {
-  position: relative;
-}
-
-#map img {
-  width: 100%;
-  height: auto;
-}
-
-#map button {
-  position: absolute;
-  top: 50%;
-  left: 47%;
-  background-color: #fff;
-  color: #000;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-footer {
-  width: 100%;
-  height: 8%;
-  background: #354051;
-}
-
-footer > p {
-  text-align: center;
-  padding-top: 30px;
-  color: #fff;
 }
